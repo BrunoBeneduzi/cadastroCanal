@@ -18,9 +18,6 @@ public class Principal {
 		usuario.adiciona(new Controle("Andresa", 12345));
 		
 		
-		for(Controle i : usuario.getValida()) {
-			System.out.println(i);
-		}
-		
+		usuario.exibe();
 	}
 }

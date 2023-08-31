@@ -77,7 +77,7 @@ public class Controle {
 
 	@Override
 	public String toString() {
-		return "Controle [usuario = " + usuario + ", senha = " + senha + ", Tipo de conta -> " + conta.getNome() +
+		return "Cadastro | usuario = " + usuario + ", senha = " + senha + ", Tipo de conta -> " + conta.getNome() +
 				", Valor da conta -> "+ conta.getValor()+"R$ , Quantidade de canais liberados -> "+conta.getNumeroCanais();
 	}
 }
