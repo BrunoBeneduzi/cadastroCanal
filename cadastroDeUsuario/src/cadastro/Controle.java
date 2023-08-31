@@ -16,6 +16,10 @@ public class Controle {
 		this.adicionaConta();
 	}
 	
+	protected Conta getConta() {
+		return conta;
+	}
+
 	protected String getUsuario() {
 		return usuario;
 	}
@@ -41,7 +45,6 @@ public class Controle {
 			if(this.atual) {
 				this.adicionarBasica();
 				
-				System.out.println("Conta Adicionada, bem vindo a conta BASICA");
 				this.atual = false;
 			}
 			else {
@@ -54,7 +57,6 @@ public class Controle {
 			if(this.atual) {
 				this.adicionarPrata();
 				
-				System.out.println("Conta Adicionada, bem vindo a conta PRATA");
 				this.atual = false;
 			}
 			else{
@@ -65,7 +67,6 @@ public class Controle {
 			break;
 		default:
 			System.out.println("Codigo de conta não existe");
-			this.separa();
 			break;
 		}	
 	}

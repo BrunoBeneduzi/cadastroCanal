@@ -11,10 +11,16 @@ public class Principal {
 		
 		
         
-		usuario.adiciona(new Controle("bruno", 01234));
-		usuario.adiciona(new Controle("Bruno", 23412));
+		usuario.adiciona(new Controle("Bruno", 12345));
+		usuario.adiciona(new Controle("Vitoria", 12345));
+		usuario.adiciona(new Controle("Ramires", 12345));
+		usuario.adiciona(new Controle("Jasmin", 12345));
+		usuario.adiciona(new Controle("Andresa", 12345));
 		
 		
-		System.out.println(usuario);
+		for(Controle i : usuario.getValida()) {
+			System.out.println(i);
+		}
+		
 	}
 }
