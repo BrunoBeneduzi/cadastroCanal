@@ -15,6 +15,10 @@ public class Controle {
 		this.senha = senha;
 		this.adicionaConta();
 	}
+	
+	protected String getUsuario() {
+		return usuario;
+	}
 
 	private void adicionarPrata() {//adiciona a conta do tipo prata
 		Conta contaPrata = new ContaPrata();
@@ -38,7 +42,6 @@ public class Controle {
 				this.adicionarBasica();
 				
 				System.out.println("Conta Adicionada, bem vindo a conta BASICA");
-				this.separa();
 				this.atual = false;
 			}
 			else {
@@ -52,7 +55,6 @@ public class Controle {
 				this.adicionarPrata();
 				
 				System.out.println("Conta Adicionada, bem vindo a conta PRATA");
-				this.separa();
 				this.atual = false;
 			}
 			else{
@@ -68,7 +70,7 @@ public class Controle {
 		}	
 	}
 
-	private void separa() {
+	protected void separa() {
 		System.out.println("*************************************");
 	}
 
