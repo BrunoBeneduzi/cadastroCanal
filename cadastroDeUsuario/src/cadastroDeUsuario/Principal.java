@@ -10,7 +10,11 @@ public class Principal {
 		usuario.setValida(new Controle("Brun",345));
 		usuario.setValida(new Controle("Bru",3432));
 		
-		System.out.println(usuario);
+		for(Controle i : usuario.getValida()) {
+			System.out.println(i);
+		}
+		
+		
 	}
 
 }
