@@ -6,11 +6,11 @@ import conta.ContaBasica;
 
 public class Controle {
 	private String usuario;
-	private int senha;
+	private String senha;
 	private boolean atual = true;
 	private Conta conta;
 
-	public Controle(String usuario, int senha) {//começa cadastrando o usuario e a senha para impedir que ele mude quando quiser
+	public Controle(String usuario, String senha) {//começa cadastrando o usuario e a senha para impedir que ele mude quando quiser
 		this.usuario = usuario;
 		this.senha = senha;
 		this.adicionaConta();

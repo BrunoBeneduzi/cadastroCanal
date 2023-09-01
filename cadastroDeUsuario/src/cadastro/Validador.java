@@ -21,7 +21,7 @@ public class Validador {
 			for(int i = 0; i < this.valida.size(); i++) {
 				
 				if(this.valida.get(i).getUsuario().equalsIgnoreCase(usuario.getUsuario())) {//se o usuario existir vai aparecer uma mensagem dizendo que já existe
-					System.out.println("Usuario já cadastrado");
+					System.out.println("Esse suario já foi cadastrado, tente outro");
 					verifica = false;
 					usuario.separa();
 				}
@@ -32,6 +32,19 @@ public class Validador {
 				usuario.separa();
 			}
 		}
+	}
+	
+	public void acesso(String usuario) {
+		boolean existe = false;
+		for(Controle i : this.valida) {
+			if(i.getUsuario().equalsIgnoreCase(usuario)) {
+				existe = true;
+				System.out.println(i);
+				break;
+			}
+		}
+		if(!existe)System.out.println("usuario não existe");
+		
 	}
 	
 	public void exibe() {
