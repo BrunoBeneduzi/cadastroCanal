@@ -8,12 +8,14 @@ public abstract class Conta{
 	public Conta() {
 		
 	}
-
 	
 	public double getValor() {
 		return valor;
 	}
-
+	
+	public void exibeInformacaoConta() {
+		
+	}
 
 	protected void setValor(double valor) {
 		this.valor = valor;

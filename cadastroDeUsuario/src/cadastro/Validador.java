@@ -1,5 +1,8 @@
 package cadastro;
 import java.util.*;
+import conta.ContaBasica;
+import conta.Conta;
+import conta.ContaPrata;
 
 public class Validador {
 	private List<Controle> valida = new ArrayList<>();
@@ -18,10 +21,9 @@ public class Validador {
 			this.valida.add(usuario);
 			System.out.println("Conta Adicionada, Bem vindo a " + usuario.getConta().getNome());
 			usuario.separa();
-
 		}
 		else {
-			if(this.valida.indexOf(controle) == -1) {
+			if(this.valida.indexOf(controle) == -1) {//se não existir o nome ele pode ser adicionado
 				this.valida.add(usuario);
 				System.out.println("Conta adicionada, Bem vindo a "+usuario.getConta().getNome());
 				usuario.separa();
@@ -43,9 +45,16 @@ public class Validador {
 		else System.out.println("Esse usuario não existe");
 	}
 
-	public void exibe() {
+	public void exibe() {//exibe todas as informações 
 		for(Controle i : this.valida) {
 			System.out.println(i);
 		}
+	}
+	
+	public void infConta() {
+		Conta contaBasica = new ContaBasica();
+		Conta contaPrata = new ContaPrata();
+		contaBasica.exibeInformacaoConta();
+		contaPrata.exibeInformacaoConta();
 	}
 }
