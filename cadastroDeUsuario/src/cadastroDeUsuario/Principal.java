@@ -13,7 +13,7 @@ public class Principal {
 
 		do {
 			System.out.print("Bem vindo ao cadastro de contas\n"+"o que deseja fazer?\n"+"1- Cadastrar usuario e senha + Perfil\n"+
-			"2- Para exibir o seu perfil\n"+"Digite (sair) para encerrar\n"+"->");
+					"2- Para exibir o seu perfil\n"+"Digite (sair) para encerrar\n"+"->");
 			escolha = sc.next();
 			System.out.println("***************************************");
 
@@ -26,8 +26,10 @@ public class Principal {
 				do {
 					System.out.print("Digite a sua senha, permitido apenas 4 digitos -> ");
 					senha = sc.next();
-					if(senha.length() <= 4) usuario.adiciona(new Controle(nome, senha));
+					
+					if(senha.length() <= 4) usuario.adicionaConta(new Controle(nome, senha));
 					else System.out.println("A senha não atende os padrãoes estabelecidos pelo programador.......Tente novamente");
+					
 				}while(senha.length() > 5);
 
 				break;
@@ -35,12 +37,14 @@ public class Principal {
 				sc.nextLine();
 				System.out.print("Digite o seu usuario -> ");
 				String acesso = sc.next();
-				
-				usuario.acesso(acesso);
+
+				usuario.entraPerfil(acesso);
 				System.out.println("***************************************");
 				break;
 			}
-
+			
+		
+		
 		}while(!escolha.equalsIgnoreCase("sair"));
 	}
 }

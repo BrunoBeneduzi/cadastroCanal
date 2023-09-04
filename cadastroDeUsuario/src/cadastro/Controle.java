@@ -16,12 +16,21 @@ public class Controle {
 		this.adicionaConta();
 	}
 	
+	public Controle() {
+		
+	}
+	
 	protected Conta getConta() {
 		return conta;
 	}
 
 	protected String getUsuario() {
 		return usuario;
+	}
+	
+	protected void setUsuario(String usuario) {
+		this.usuario = usuario;
+		
 	}
 
 	private void adicionarPrata() {//adiciona a conta do tipo prata
@@ -80,4 +89,12 @@ public class Controle {
 		return "Cadastro | usuario = " + usuario + ", senha = " + senha + ", Tipo de conta -> " + conta.getNome() +
 				", Valor da conta -> "+ conta.getValor()+"R$ , Quantidade de canais liberados -> "+conta.getNumeroCanais();
 	}
+	
+	
+	@Override
+	public boolean equals(Object obj) {
+		Controle aux = (Controle) obj;
+		return this.usuario.equalsIgnoreCase(aux.usuario);
+	}
+	
 }
